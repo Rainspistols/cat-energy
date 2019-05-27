@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <img src="#" alt="cat-energy-logo" class="page-header__logo logo" width="33" height="38">
+    <button type="button" class="button page-header__button"><img src="#" alt="открыть меню"></button>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--current"><a>Главная</a></li>
+        <li class="main-nav__item"><a href="#">Каталог продукции</a></li>
+        <li class="main-nav__item"><a href="#">Подбор программы</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="program-selection-main">
+    <form action="https://echo.htmlacademy.ru" method="post" class="program-selection__full-form">
+      <h1 class="selection-form__title">Подбор программы</h1>
+      <p class="selection-form__instruction">Заполните анкету и мы подберем
+        программу питания для вашего кота</p>
+      <div class="first-block">
+        <label class="first-block__label first-block__label1">Имя:*
+          <input type="text" name="name" placeholder="БАРСИК">
+        </label>
+        <label class="first-block__label first-block__label2">Вес (кг):*
+          <input type="number" name="weight" placeholder="7" step=".1">
+        </label>
+        <label class="first-block__label first-block__label">Возраст (лет):
+          <input type="number" name="age" placeholder="7" step=".1">
+        </label>
+      </div>
+      <div class="second-block">
+        <label class="second-block__label">Похудение
+          <input type="radio" class="second-block__input second-block__input1" name="weight-status" value="weight-loss">
+          <span class="second-block__checkmark"></span>
+        </label>
+        <label class="second-block__label">Набор массы
+          <input type="radio" class="second-block__input second-block__input2" name="weight-status" value="weight-gain">
+          <span class="second-block__checkmark"></span>
+        </label>
+        <label class="second-block__label">Не знаю (Нужен ваш совет)
+          <input type="radio" class="second-block__input second-block__input3" name="weight-status" value="i-dont-know">
+          <span class="second-block__checkmark"></span>
+        </label>
+      </div>
+      <fieldset class="cat-owner-information">
+        <legend class="cat-owner-information__title">Контактные данные (владельца кота)</legend>
+        <label class="cat-owner-information__label cat-owner-information__label1">E-mail:*
+          <input type="text" class="cat-owner-information__input" type="email" name="cat-owner-email"
+            placeholder="kuklachev@gmail.com">
+        </label>
+        <label class="cat-owner-information__label cat-owner-information__label2">Телефон:*
+          <input type="text" class="cat-owner-information__input" type="tel" name="cat-owner-tel"
+            placeholder="8 (960) 900-60-90">
+        </label>
+      </fieldset>
+      <fieldset class="commentary">
+        <legend class="commentary__title">Комментарий</legend>
+        <input type="text" class="commentary__input" name="cats-behavior"
+          placeholder="Расскажите обо всех повадках кота">
+      </fieldset>
+      <fieldset class="additional-info">
+        <legend class="additional-info__title">Дополнительно</legend>
+        <label class="additional-info__label">Сахарозаменитель
+          <input type="checkbox" name="food-nutritions" value="sugar-substitute" class="additional-info__input">
+          <span class="additional-info__checkmark"></span>
+        </label>
+        <label class="additional-info__label">Питьевая вода
+          <input type="checkbox" name="food-nutritions" value="potable-water" class="additional-info__input">
+          <span class="additional-info__checkmark"></span>
+        </label>
+        <label class="additional-info__label">Молоко
+          <input type="checkbox" name="food-nutritions" value="milk" class="additional-info__input">
+          <span class="additional-info__checkmark"></span>
+        </label>
+        <label class="additional-info__label">Витамины
+          <input type="checkbox" name="food-nutritions" value="vitamins" class="additional-info__input">
+          <span class="additional-info__checkmark"></span>
+        </label>
+      </fieldset>
+      <div class="button-wrapp">
+        <button class="program-selection__button button" type="submit">Отправить заявку</button>
+        <p class="mandatory-field">* — Обязательные поля</p>
+      </div>
+    </form>
+
+    <div class="invitation">
+      <b class="invitation__title">приглашаем
+        к сотрудничеству
+        дилеров!</b>
+      <p class="invitation__adress">ул. Большая Конюшенная, д. 19/8
+        Санкт-Петербург</p>
+    </div>
+
+
+    <!-- google-map -->
+  </main>
+
+
+  <footer class="main-footer">
+    <div class="main-footer__logo">
+      <img src="#" alt="cat-energy" class="main-footer__image" width="128" height="24">
+    </div>
+    <div class="main-footer__socials socials">
+      <ul class="socials__list">
+        <li class="socials__item socials__item--vk">
+          <a href="#" class="socials__link" aria-label="vk">
+            <img src="#" alt="vk" width="22" height="12">
+          </a>
+        </li>
+        <li class="socials__item socials__item--instagram">
+          <a href="#" class="socials__link" aria-label="instagram">
+            <img src="#" alt="instagram" width="16" height="16">
+          </a>
+        </li>
+        <li class="socials__item socials__item--facebook">
+          <a href="#" class="socials__link" aria-label="facebook">
+            <img src="#" alt="facebook" width="10" height="19">
+          </a>
+        </li>
+      </ul>
+      <p class="main-footer__site-author">Rainspistols</p>
+      <img src="#" alt="html-logo" class="main-footer__site-author-logo">
+    </div>
+  </footer>
+
+</body>
+
+</html>
