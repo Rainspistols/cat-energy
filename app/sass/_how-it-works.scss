@@ -1,0 +1,60 @@
+.how-it-works {
+  background-color: #ffffff;
+  padding: 0 20px;
+
+  &__title {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 60px;
+    text-align: center;
+    margin: 0 0 35px 0;
+  }
+  &__list {
+    list-style: none;
+    padding-left: 80px;
+    margin: 0;
+  }
+  &__item {
+    margin-bottom: 25px;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+  }
+  &__item:last-child {
+    margin-bottom: 35px;
+  }
+  &__item::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: -80px;
+    top: -5px;
+    background-color: #68b738;
+  }
+  &__item::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: -64px;
+    top: 10px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+  &__item1::after {
+    background-image: url(../../app/img/advantage-1.png);
+  }
+  &__item2::after {
+    background-image: url(../../app/img/advantage-2.png);
+  }
+  &__item3::after {
+    background-image: url(../../app/img/advantage-3.png);
+  }
+  &__item4::after {
+    background-image: url(../../app/img/advantage-4.png);
+  }
+}

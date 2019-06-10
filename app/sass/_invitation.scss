@@ -1,0 +1,21 @@
+.invitation {
+  background-color: #f2f2f2;
+  display: flex;
+  padding: 30px 20px;
+  justify-content: space-between;
+  &__title {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-right: 30px;
+  }
+  &__adress {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+}

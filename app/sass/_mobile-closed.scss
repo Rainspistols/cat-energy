@@ -1,0 +1,24 @@
+.mobile-closed {
+  margin-top: 200px;
+  position: relative;
+  padding: 11px 20px 16px 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &__button {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    height: 18px;
+    padding: 0;
+  }
+  &__nav {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  &__button-img-open {
+    display: none;
+  }
+}

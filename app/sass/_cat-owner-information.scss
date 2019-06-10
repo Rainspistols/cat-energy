@@ -1,0 +1,77 @@
+.cat-owner-information {
+  border: none;
+  margin: 0;
+  padding: 30px 0;
+  &__title-wrap {
+    display: flex;
+  }
+  &__title {
+    padding-top: 5px;
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 0 20px;
+    position: relative;
+    margin: 0 0 30px;
+    white-space: nowrap;
+  }
+  &__line {
+    width: 100%;
+    height: 3px;
+    background-color: #68b738;
+    margin-top: 13px;
+  }
+  &__label {
+    position: relative;
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    padding: 0 20px;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  &__label:last-child {
+    margin-bottom: 0;
+  }
+  &__input {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: black;
+    width: 100%;
+    padding: 0 40px 0 15px;
+    height:45px;
+    box-sizing: border-box;
+    margin-left: 12px;
+    border: 1px solid #e6e6e6;
+    text-transform: inherit;
+  }
+  &__input::placeholder {
+    color: #444444;
+    text-transform: uppercase;
+  }
+  &__label::after {
+    content: "";
+    position: absolute;
+  }
+  &__label1::after {
+    width: 17px;
+    height: 13px;
+    background-image: url(../../app/img/mail.svg);
+    right: 32px;
+    top: 16px;
+  }
+  &__label2::after {
+    width: 20px;
+    height: 20px;
+    background-image: url(../../app/img/phone.svg);
+    right: 27px;
+    top: 13px;
+  }
+}

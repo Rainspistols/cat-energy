@@ -1,0 +1,33 @@
+.name-block {
+  padding: 0 20px 20px;
+  border-bottom: 1px solid #ededed;
+  &__label {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+  }
+  &__input-name {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  &__input {
+    border: 1px solid #ededed;
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 15px 18px 15px 18px;
+    margin-left: 10px;
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+  }
+  &__input::placeholder {
+    color: black;
+  }
+}

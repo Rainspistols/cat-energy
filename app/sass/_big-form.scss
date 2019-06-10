@@ -1,0 +1,19 @@
+.big-form {
+  &__title {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 60px;
+    padding: 0 20px;
+    margin: 0 0 20px;
+  }
+  &__instruction {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+  }
+}

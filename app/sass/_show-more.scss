@@ -1,0 +1,24 @@
+.show-more {
+  padding: 27px 20px 25px 20px;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  &__img {
+    margin: auto;
+    margin-bottom: 20px;
+    display: block;
+  }
+  &__description {
+    text-align: center;
+  }
+  &__phrase {
+    @include font-oswald__16-20-400-upper;
+    margin-bottom: 10px;
+    display: block;
+  }
+  &__phrase2 {
+    @include font-arial__12-16-400-444444;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+}

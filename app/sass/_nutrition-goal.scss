@@ -1,0 +1,84 @@
+.nutrition-goal {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 0;
+  }
+
+  &__item {
+    background-color: #f2f2f2;
+    padding: 35px 20px 20px 20px;
+    margin-bottom: 20px;
+  }
+  &__title {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 37px;
+    color: #000000;
+    text-transform: uppercase;
+    padding-left: 70px;
+    position: relative;
+  }
+  &__title::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #68b738;
+    left: 0;
+    top: -6px;
+  }
+  &__title1::after,
+  &__title2::after {
+    content: "";
+    position: absolute;
+  }
+  &__title1::after {
+    width: 35px;
+    height: 49px;
+    background-image: url(../../app/img/cat1.svg);
+    left: 7px;
+    top: -9px;
+  }
+  &__title2::after {
+    width: 67px;
+    height: 28px;
+    background-image: url(../../app/img/cat2.svg);
+    left: -9px;
+    top: 3px;
+  }
+  &__description {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    padding-bottom: 20px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  &__link {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    position: relative;
+    margin-right: 10px;
+  }
+  &__link::after {
+    content: "";
+    width: 24px;
+    height: 11px;
+    background-image: url(../../app/img/arrow-long.svg);
+    position: absolute;
+    right: -32px;
+    top: 7px;
+  }
+}

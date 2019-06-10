@@ -1,0 +1,34 @@
+.personal-programm {
+  background-image: url(../../app/img/index-background-mobile.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 305px;
+  padding-top: 20px;
+  margin-bottom: 22px;
+  &__title {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    color: #ffffff;
+    text-align: center;
+    max-width: 305px;
+    margin: 0 auto 20px auto;
+  }
+  &__slogan {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 29px;
+  }
+  &__img-food {
+    margin: auto;
+    display: block;
+    margin-bottom: 3px;
+  }
+}

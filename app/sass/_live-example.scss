@@ -1,0 +1,110 @@
+.live-example {
+  background-color: #f2f2f2;
+  padding: 30px 20px;
+  position: relative;
+
+  &__title {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 60px;
+    margin: 0 0 30px 0;
+  }
+
+  &__description {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  &__measures {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__measure-term {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 15px 0;
+    border: 1px solid #cfcfcf;
+    width: 45%;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 38px;
+    border-radius: 5%;
+    position: relative;
+  }
+
+  &__measure-term1::after,
+  &__measure-term2::after {
+    position: absolute;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: none;
+    padding: 5px;
+    background-color: #f2f2f2;
+    width: 60%;
+    bottom: -20px;
+    left: 20%;
+    text-align: center;
+  }
+
+  &__measure-term1::after {
+    content: "снижение
+веса";
+
+  }
+
+  &__measure-term2::after {
+    content: "затрачено
+времени";
+
+  }
+
+  &__img-slogan {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 44px;
+  }
+
+  &__before-after-wrap {
+    height: 240px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__img-cat {
+    position: absolute;
+    left: calc(50% - 160px);
+  }
+  &__before-after {
+    display: flex;
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    width: 60%;
+    margin: 0 auto;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+  &__before,
+  &__after {
+    margin: 0;
+  }
+
+}

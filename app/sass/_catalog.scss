@@ -1,0 +1,45 @@
+.catalog {
+  &__title {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 60px;
+    margin: 0;
+    padding: 20px 0 20px 20px;
+  }
+  &__product-details {
+    width: 100%;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    padding: 0 20px;
+    border-top: 1px solid #ededed;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__description {
+    width: 50%;
+    box-sizing: border-box;
+  }
+  &__product-title {
+    @include font-oswald__16-20-400-upper;
+    margin: 20px 0 10px;
+    display: block;
+    width: 60%;
+  }
+  &__details-row {
+    @include font-arial__12-16-400-444444;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__details-column {
+    padding: 0;
+  }
+  &__button {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,82 @@
+.additional-info {
+  border: none;
+  margin: 0;
+  margin-bottom: 43px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__title-wrap {
+    display: flex;
+    width: 100%;
+  }
+
+  &__title {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 0 20px;
+    position: relative;
+    margin: 0 0 30px;
+    white-space: nowrap;
+  }
+
+  &__line {
+    width: 100%;
+    height: 3.5px;
+    background-color: #68b738;
+    margin-top: 13px;
+  }
+
+  &__label {
+    width: 100%;
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    position: relative;
+      padding: 0 0 0 65px;
+  }
+
+  &__label:last-child {
+    margin-bottom: 0;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  &__checkmark {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ededed;
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: -8px;
+  }
+
+  &__checkmark::after {
+    content: "";
+    width: 12px;
+    height: 24px;
+    border: solid #68b738;
+    border-width: 0 3px 3px 0;
+    display: block;
+    transform: rotate(45deg);
+    left: 11px;
+    top: -2px;
+    position: absolute;
+    display: none;
+  }
+
+  &__input:checked~&__checkmark::after {
+    display: block;
+  }
+}
