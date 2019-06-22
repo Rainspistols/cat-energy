@@ -6,6 +6,7 @@
     line-height: 60px;
     padding: 0 20px;
     margin: 0 0 20px;
+    border-top: 1px solid #e6e6e6;
   }
   &__instruction {
     font-family: 'Oswald', sans-serif, Arial;
@@ -15,5 +16,45 @@
     padding: 0 20px;
     text-transform: uppercase;
     margin: 0 0 30px;
+    width: 70%;
+  }
+}
+
+
+@media (min-width:$tablet-width) {
+  .big-form {
+    width: 710px;
+    margin-left: auto;
+    margin-right: auto;
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 50px;
+      padding: 0;
+      width: 710px;
+      margin-left: auto;
+      margin-right: auto;
+      border: none;
+    }
+    &__instruction {
+      padding-left: 40px;
+      width: 50%;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 70px;
+    }
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .big-form {
+    width: 1220px;
+    &__title {
+      width: 1220px;
+    }
+    &__instruction {
+      padding: 0;
+      width: 350px;
+    }
   }
 }

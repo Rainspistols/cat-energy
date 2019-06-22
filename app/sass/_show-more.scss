@@ -20,5 +20,54 @@
     margin-bottom: 20px;
     display: block;
   }
+  &__button {
+    margin-left: 0;
+  }
+}
 
+@media (min-width:$tablet-width) {
+  .show-more {
+    width: 320px;
+    border: 1px solid #cdcdcd;
+    box-sizing: border-box;
+    padding: 56px 35px 40px;
+    margin-bottom: 70px;
+    &__img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 54px;
+    }
+    &__description {
+      margin-bottom: 91px;
+    }
+    &__phrase {
+      font-size: 20px;
+      line-height: 20px;
+      width: 140px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+    }
+    &__phrase2 {
+      font-size: 16px;
+      line-height: 20px;
+      width: 170px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__button {
+      width: 250px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .show-more {
+    margin-bottom: 0;
+  }
 }

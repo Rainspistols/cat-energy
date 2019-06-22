@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
 }
+
 @mixin font-arial__12-16-400-444444 {
   font-family: Arial;
   font-weight: 400;
@@ -28,32 +29,44 @@
 }
 
 @mixin green-line {
-  &__title-wrap {
-    display: flex;
-  }
-  &__title {
-    padding-top: 5px;
-    font-family: 'Oswald', sans-serif, Arial;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;
-    padding: 0 20px;
+  &__green-line-wrap {
     position: relative;
-    margin: 0 0 30px;
-    white-space: nowrap;
   }
-  &__line {
+
+  &__green-line-wrap::before {
+    position: absolute;
+    content: "";
     width: 100%;
     height: 3px;
     background-color: #68b738;
-    margin-top: 13px;
+    top: 13px;
+    left: 0;
+  }
+
+  @media (min-width:$tablet-width) {
+    &__green-line-wrap::before {
+      top: calc(50% + 1.5px);
+      left: -30px;
+      width: calc(100% + 60px);
+    }
+  }
+
+  @media (min-width:$desktop-width) {
+    &__green-line-wrap::before {
+      top: calc(50% + 1.5px);
+      left: -70px;
+      width: calc(100% + 140px);
+    }
   }
 }
 
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
 @import "mobile-nav";
 @import "mobile-closed";
-@import "personal-programm";
 @import "button68b738";
+@import "personal-programm";
 @import "nutrition-goal";
 @import "how-it-works";
 @import "live-example";
@@ -70,12 +83,16 @@
 @import "show-more";
 @import "additional-goods";
 @import "order-present";
+@import "google-map";
+@import "page-header";
+@import "program-selection";
 
 
 
 body {
   margin: 0;
   padding: 0;
+  background-color: #ffffff;
 }
 
 .visually-hidden {
@@ -89,48 +106,12 @@ body {
   overflow: hidden;
 }
 
-.page-header {
-  border-bottom: 1px solid #e6e6e6;
-
-  &__nav {
-    display: none;
-  }
-}
-
-.google-map {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 62px;
-    height: 53px;
-    background-image: url(../../app/img/map-pin.png);
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    top: 50%;
-    left: 50%;
-  }
-}
-
-.program-selection-main {
-  .button-wrap {
-    margin: 0;
-    padding: 0;
-  }
-  .mandatory-field {
-    margin: 0;
-    padding: 0;
-    font-family: 'Oswald', sans-serif, Arial;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #444444;
-    margin-top: 20px;
-    text-align: center;
-  }
-}
-
 .catalog-main__additional-goods {
-  margin-bottom: 35px;
+  margin-bottom: 85px;
+}
+
+.page-main {
+  &__invitation {
+    background-color: #ffffff;
+  }
 }

@@ -11,12 +11,14 @@
 </head>
 
 <body>
-  <header class="page-header">
-    <h1 class="big-form__title">Подбор программы</h1>
+  <header class="page-header program-selection__header">
+    <h1 class="visually-hidden">Главная страница Cat energy</h1>
     <div class="mobile-closed">
-      <img class="mobile-closed__logo-img" src="../img/logo-mobile.svg" alt="логотип компании" width="33" height="38">
-      <img class="mobile-closed__logo-name" src="../img/logo-mobile-header.svg" alt="Cat energy" width="101"
-        height="18">
+      <a href="#" class="mobile-closed__logo-link">
+        <img class="mobile-closed__logo-img" src="../img/logo-mobile.svg" alt="логотип компании" width="33" height="38">
+        <img class="mobile-closed__logo-name" src="../img/logo-mobile-header.svg" alt="Cat energy" width="101"
+          height="18">
+      </a>
       <button type="button" class="mobile-closed__button">
         <img class="mobile-closed__button-img-open" src="../img/m-close.svg" alt="Cat energy" width="18" height="18">
         <img class="mobile-closed__button-img-closed" src="../img/mobile-menu.svg" alt="открыть меню" width="24px"
@@ -25,83 +27,87 @@
     </div>
     <nav class="page-header__nav mobile-nav">
       <ul class="mobile-nav__list">
-        <li class="mobile-nav__item mobile-nav__item--current">
+        <li class="mobile-nav__item mobile-nav__item">
           <a class="mobile-nav__link" href="#">Главная</a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="#">Каталог продукции</a>
         </li>
         <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="#">Подбор программы</a>
+          <a class="mobile-nav__link mobile-nav__link--current" href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <main class="program-selection-main">
-    <form class="program-selection__big-form big-form" action="https://echo.htmlacademy.ru" method="post" <p
-      class="big-form__instruction">Заполните анкету и мы подберем
-      программу питания для вашего кота</p>
-      <div class="big-form__name-block name-block">
-        <label class="name-block__label name-block__label1">
-          <span class="name-block__input-name">Имя:*</span>
-          <input class="name-block__input" type="text" name="name" placeholder="БАРСИК">
-        </label>
-        <label class="name-block__label name-block__label2">
-          <span class="name-block__input-name">Вес (кг):*</span>
-          <input class="name-block__input" type="number" name="weight" placeholder="7" step=".1">
-        </label>
-        <label class="name-block__label name-block__label">
-          <span class="name-block__input-name">Возраст (лет):</span>
-          <input class="name-block__input" type="number" name="age" placeholder="7" step=".1">
-        </label>
-      </div>
+  <main class="program-selection__main">
+    <h2 class="big-form__title">Подбор программы</h2>
+    <form class="program-selection__big-form big-form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="big-form__instruction">Заполните анкету и мы подберем
+        программу питания для вашего кота</p>
 
-      <div class="big-form__weight-block weight-block">
-        <label class="weight-block__label">Похудение
-          <input type="radio" class="weight-block__input" name="weight-status" value="weight-loss">
-          <span class="weight-block__checkmark"></span>
-        </label>
-        <label class="weight-block__label">Набор массы
-          <input type="radio" class="weight-block__input" name="weight-status" value="weight-gain">
-          <span class="weight-block__checkmark"></span>
-        </label>
-        <label class="weight-block__label">Не знаю (Нужен ваш совет)
-          <input type="radio" class="weight-block__input" name="weight-status" value="i-dont-know">
-          <span class="weight-block__checkmark"></span>
-        </label>
+      <div class="program-selection__wrap-nameweight">
+        <div class="big-form__name-block name-block">
+          <label class="name-block__label name-block__label1">
+            <span class="name-block__input-name">Имя:*</span>
+            <input class="name-block__input" type="text" name="name" placeholder="БАРСИК">
+          </label>
+          <label class="name-block__label name-block__label2">
+            <span class="name-block__input-name">Вес (кг):*</span>
+            <input class="name-block__input" type="number" name="weight" placeholder="7" step=".1">
+          </label>
+          <label class="name-block__label name-block__label">
+            <span class="name-block__input-name">Возраст (лет):</span>
+            <input class="name-block__input" type="number" name="age" placeholder="7" step=".1">
+          </label>
+        </div>
+
+        <div class="big-form__weight-block weight-block">
+          <h2 class="visually-hidden">Ваши цели</h2>
+          <label class="weight-block__label">Похудение
+            <input type="radio" class="weight-block__input" name="weight-status" value="weight-loss" checked>
+            <span class="weight-block__checkmark"></span>
+          </label>
+          <label class="weight-block__label">Набор массы
+            <input type="radio" class="weight-block__input" name="weight-status" value="weight-gain">
+            <span class="weight-block__checkmark"></span>
+          </label>
+          <label class="weight-block__label">Не знаю (Нужен ваш совет)
+            <input type="radio" class="weight-block__input" name="weight-status" value="i-dont-know">
+            <span class="weight-block__checkmark"></span>
+          </label>
+        </div>
       </div>
 
       <div class="cat-owner-information">
-        <div class="cat-owner-information__title-wrap">
-          <h2 class="cat-owner-information__title">Контактные данные<br>(владельца кота)</h2>
-          <div class="cat-owner-information__line"></div>
+        <div class="cat-owner-information__green-line-wrap">
+          <h2 class="cat-owner-information__title">Контактные данные (владельца кота)</h2>
         </div>
-        <label class="cat-owner-information__label cat-owner-information__label1">E-mail:*
-          <input class="cat-owner-information__input" type="email" name="cat-owner-email"
-            placeholder="kuklachev@gmail.com">
-        </label>
-        <label class="cat-owner-information__label cat-owner-information__label2">Телефон:*
-          <input class="cat-owner-information__input" type="tel" name="cat-owner-tel" placeholder="8 (960) 900-60-90">
-        </label>
+        <div class="cat-owner-information__label-wrap">
+          <label class="cat-owner-information__label cat-owner-information__label1">E-mail:*
+            <input class="cat-owner-information__input" type="email" name="cat-owner-email"
+              placeholder="kuklachev@gmail.com">
+          </label>
+          <label class="cat-owner-information__label cat-owner-information__label2">Телефон:*
+            <input class="cat-owner-information__input" type="tel" name="cat-owner-tel" placeholder="8 (960) 900-60-90">
+          </label>
+        </div>
       </div>
 
       <div class="comment-block">
-        <div class="comment-block__title-wrap">
+        <div class="comment-block__green-line-wrap">
           <h2 class="comment-block__title">Комментарий</h2>
-          <div class="comment-block__line"></div>
         </div>
         <textarea class="comment-block__textarea" name="cats-behavior"
           placeholder="Расскажите обо всех повадках кота"></textarea>
       </div>
 
       <div class="additional-info">
-        <div class="additional-info__title-wrap">
+        <div class="additional-info__green-line-wrap">
           <h2 class="additional-info__title">Дополнительно</h2>
-          <div class="additional-info__line"></div>
         </div>
         <label class="additional-info__label">Сахарозаменитель
-          <input type="checkbox" name="food-nutritions" value="sugar-substitute" class="additional-info__input">
+          <input type="checkbox" name="food-nutritions" value="sugar-substitute" class="additional-info__input" checked>
           <span class="additional-info__checkmark"></span>
         </label>
         <label class="additional-info__label">Питьевая вода
@@ -118,24 +124,34 @@
         </label>
       </div>
 
-      <div class="button-wrap">
-        <button class="button68b738" type="submit">Отправить заявку</button>
-        <p class="mandatory-field">* — Обязательные поля</p>
+      <div class="program-selection__button-wrap">
+        <button class="button68b738 program-selection__button" type="submit">Отправить заявку</button>
+        <p class="program-selection__mandatory-field">* — Обязательные поля</p>
       </div>
 
     </form>
 
-    <div class="invitation">
-      <b class="invitation__title">приглашаем
-        к сотрудничеству
-        дилеров!</b>
-      <p class="invitation__adress">ул. Большая Конюшенная, д. 19/8
-        Санкт-Петербург</p>
+    <div class="program-selection__invitation-wrap">
+      <section class="invitation program-selection__invitation">
+        <h2 class="invitation__title">приглашаем
+          к сотрудничеству
+          дилеров!</h2>
+        <p class="invitation__adress">ул. Большая Конюшенная, д. 19/8 <span class="invitation__space">1</span>
+          Санкт-Петербург</p>
+      </section>
     </div>
+
     <div class="google-map">
+      <section class="invitation page-main__invitation google-map__invitation">
+        <h2 class="invitation__title">приглашаем
+          к сотрудничеству
+          дилеров!</h2>
+        <p class="invitation__adress">ул. Большая Конюшенная, д. 19/8<br><br>
+          Санкт-Петербург</p>
+      </section>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2445.1998143444616!2d20.950442215891588!3d52.20341626739473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471933554fcb36a5%3A0x5d726b966baa6cc3!2sDrawska+10B%2C+02-001+Warszawa!5e0!3m2!1sru!2spl!4v1560005327264!5m2!1sru!2spl"
-        width="100%" height="370" frameborder="0" style="border:0" allowfullscreen></iframe>
+        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 
   </main>
@@ -146,17 +162,17 @@
     <ul class="socials">
       <li class="socials__item socials__item--vk">
         <a href="#" class="socials__link" aria-label="vk">
-          <img src="../img/m-vk.svg" alt="vk" width="22" height="12">
+          <img class="socials__img" src="../img/m-vk.svg" alt="vk">
         </a>
       </li>
       <li class="socials__item socials__item--instagram">
         <a href="#" class="socials__link" aria-label="instagram">
-          <img src="../img/m-insta.svg" alt="instagram" width="16" height="16">
+          <img class="socials__img" src="../img/m-insta.svg" alt="instagram">
         </a>
       </li>
       <li class="socials__item socials__item--facebook">
         <a href="#" class="socials__link" aria-label="facebook">
-          <img src="../img/m-fb.svg" alt="facebook" width="10" height="19">
+          <img class="socials__img" src="../img/m-fb.svg" alt="facebook">
         </a>
       </li>
     </ul>

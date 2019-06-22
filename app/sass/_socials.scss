@@ -13,8 +13,62 @@
   &__item {
     width: 20%;
     height: 100%;
+    margin-right: 20px;
+  }
+  &__item:last-child {
+    margin-right: 0;
   }
   &__link {
     display: block;
+    width: 100%;
+  }
+  &__img {
+    object-fit: cover;
+    width: 100%;
+  }
+  &__item:nth-child(1) {
+    width:22px;
+    height: 18px;
+  }
+  &__item:nth-child(2) {
+    width:16px;
+    height: 16px;
+  }
+  &__item:nth-child(3) {
+    width:10px;
+    height: 19px;
+  }
+}
+
+@media (min-width:$tablet-width) {
+  .socials {
+    width: auto;
+    border: none;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    &__item {
+      width: auto;
+      margin-right: 25px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    &__item:last-child {
+      margin-right: 0;
+    }
+    &__item:nth-child(1) {
+      width:30px;
+      height: 16px;
+    }
+    &__item:nth-child(2) {
+      width:23px;
+      height: 23px;
+    }
+    &__item:nth-child(3) {
+      width:14px;
+      height: 28px;
+    }
   }
 }

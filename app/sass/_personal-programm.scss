@@ -32,3 +32,77 @@
     margin-bottom: 3px;
   }
 }
+
+@media (min-width:$tablet-width) {
+  .personal-programm {
+    padding: 0;
+    background-image: url(../../app/img/index-can-tablet.jpg);
+    width: 710px;
+    margin: auto;
+    height: 615px;
+    margin-top: 300px;
+    &__title {
+      text-align: left;
+      max-width: 430px;
+      color: black;
+      font-size: 60px;
+      line-height: 60px;
+      margin-left:90px;
+      margin-bottom: 50px;
+      position: relative;
+      top: -200px;
+    }
+    &__slogan {
+      text-align: left;
+      max-width: 430px;
+      color: black;
+      margin-left:90px;
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 40px;
+      position: relative;
+      top: -200px;
+    }
+    &__img-food {
+      display: none;
+    }
+    &__button {
+      margin: 0;
+      max-width: 245px;
+      margin-left: 90px;
+      margin-bottom: 530px;
+      position: relative;
+      top: -200px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .personal-programm {
+    background-image: url(../../app/img/index-background-desktop.jpg);
+    width: 50%;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #65a93c;
+    background-position: top right;
+    &__title {
+      margin-left: 80px;
+      top: 220px;
+      right: 650px;
+    }
+    &__slogan {
+      margin-left: 80px;
+      top: 220px;
+      right: 650px;
+    }
+    &__button {
+      margin-left: 80px;
+      top: 220px;
+      right: 650px;
+    }
+  }
+}

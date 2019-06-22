@@ -1,0 +1,30 @@
+.page-header {
+
+  &__nav {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    width: 710px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    border: none;
+    margin-bottom: 60px;
+
+    &__nav {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    margin-top: 50px;
+    width: 1220px;
+    justify-content: space-between;
+    margin-bottom: 650px;
+  }
+}

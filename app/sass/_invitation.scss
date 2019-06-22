@@ -3,12 +3,15 @@
   display: flex;
   padding: 30px 20px;
   justify-content: space-between;
+  align-items: center;
   &__title {
     font-family: 'Oswald', sans-serif, Arial;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+    margin: 0;
+    padding: 0;
     margin-right: 30px;
   }
   &__adress {
@@ -17,5 +20,56 @@
     font-size: 14px;
     line-height: 20px;
     margin: 0;
+    .invitation__space {
+      display: none;
+    }
+  }
+
+}
+
+.google-map__invitation {
+  display: none;
+}
+
+@media (min-width:$tablet-width) {
+  .invitation {
+    width: 710px;
+    padding: 65px 40px;
+    margin: auto;
+    &__title {
+      width: 160px;
+      font-size: 20px;
+      line-height: 25px;
+    }
+    &__adress {
+      width: 160px;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: right;
+      &__space {
+        display: block;
+      }
+    }
+    .invitation__space {
+      display: block;
+      opacity: 0;
+    }
+
   }
 }
+
+@media (min-width:$desktop-width) {
+  .invitation {
+    position: absolute;
+    width: 570px;
+    height: 210px;
+    box-sizing: border-box;
+    bottom: 20px;
+    left: 10px;
+    display: none;
+  }
+  .google-map__invitation {
+    display: flex;
+  }
+}
+

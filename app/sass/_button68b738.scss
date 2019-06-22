@@ -1,5 +1,5 @@
 .button68b738 {
-  margin: 0 auto;
+  margin-left: 20px;
   width: calc(100% - 40px);
   display: block;
   background-color: #68b738;
@@ -11,6 +11,15 @@
   color: #ffffff;
   text-transform: uppercase;
   padding: 12px;
+}
+
+.button68b738:hover,
+.button68b738:focus {
+  background-color: #5eaa2f;
+}
+
+.button68b738:active {
+  color: rgba($color: white, $alpha: 0.3);
 }
 
 .buttonf2f2f2 {

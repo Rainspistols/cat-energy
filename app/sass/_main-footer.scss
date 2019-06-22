@@ -12,13 +12,34 @@
   &__site-author {
     text-align: center;
     margin: 0;
-    font-family:Arial;
+    font-family: 'Oswald', sans-serif, Arial;
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
     padding: 25px 20px;
     height: 64px;
     box-sizing: border-box;
+    text-transform: uppercase;
+    color: #767676;
+  }
+}
 
+@media (min-width: $tablet-width) {
+  .main-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 60px 0;
+    align-items: center;
+    &__image-logo,
+    &__site-author {
+      padding: 0;
+    }
+    &__site-author {
+      height: auto;
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: bold;
+    }
   }
 }

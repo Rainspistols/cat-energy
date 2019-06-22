@@ -2,15 +2,22 @@
   &__list {
     list-style: none;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     padding-bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
   }
 
   &__item {
     background-color: #f2f2f2;
     padding: 35px 20px 20px 20px;
     margin-bottom: 20px;
+    box-sizing: border-box;
+    width: calc(100% - 40px);
   }
+
   &__title {
     font-family: 'Oswald', sans-serif, Arial;
     font-weight: 400;
@@ -21,6 +28,7 @@
     padding-left: 70px;
     position: relative;
   }
+
   &__title::before {
     content: "";
     position: absolute;
@@ -31,11 +39,13 @@
     left: 0;
     top: -6px;
   }
+
   &__title1::after,
   &__title2::after {
     content: "";
     position: absolute;
   }
+
   &__title1::after {
     width: 35px;
     height: 49px;
@@ -43,6 +53,7 @@
     left: 7px;
     top: -9px;
   }
+
   &__title2::after {
     width: 67px;
     height: 28px;
@@ -50,6 +61,7 @@
     left: -9px;
     top: 3px;
   }
+
   &__description {
     font-family: Arial;
     font-weight: 400;
@@ -61,6 +73,7 @@
     margin-bottom: 20px;
     border-bottom: 1px solid #d9d9d9;
   }
+
   &__link {
     text-decoration: none;
     color: #000000;
@@ -72,6 +85,7 @@
     position: relative;
     margin-right: 10px;
   }
+
   &__link::after {
     content: "";
     width: 24px;
@@ -80,5 +94,158 @@
     position: absolute;
     right: -32px;
     top: 7px;
+  }
+}
+
+
+
+@media (min-width:$tablet-width) {
+  .nutrition-goal {
+    width: 710px;
+    margin: auto;
+
+    &__list {
+      padding: 0;
+      margin: 0;
+    }
+
+    &__item {
+      height: 370px;
+      box-sizing: border-box;
+      padding: 80px 0 50px 50px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 37px;
+      position: relative;
+      padding-left: 0;
+      margin-bottom: 30px;
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 24px;
+      width: 58%;
+      border: none;
+      margin-bottom: auto;
+      margin-top: 0;
+
+    }
+
+    &__link {
+      font-size: 20px;
+      line-height: 20px;
+      width: 110px;
+    }
+
+    &__title::before {
+      width: 200px;
+      height: 200px;
+      top: 25px;
+      left: 400px;
+    }
+
+    &__title1::after {
+      width: 140px;
+      height: 194px;
+      background-image: url(../../app/img/cat-slim.svg);
+      left: 420px;
+      top: 5px;
+    }
+
+    &__title2::after {
+      width: 268px;
+      height: 112px;
+      background-image: url(../../app/img/cat-pro.svg);
+      left: 370px;
+      top: 80px;
+    }
+
+    &__link::after {
+      content: "";
+      right: -50px;
+      top: 5px;
+    }
+
+    &__link:focus,
+    &__link:hover {
+      opacity: 0.7;
+    }
+
+    &__link:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .nutrition-goal {
+    width: 1220px;
+    margin: auto;
+
+    &__list {
+      flex-wrap: nowrap;
+      flex-direction: row;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 570px;
+      box-sizing: border-box;
+      margin-right: 0;
+      padding: 80px 50px 50px 50px;
+      margin-bottom: 70px;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 36px;
+      margin-left: 170px;
+      margin-bottom: 70px;
+    }
+
+    &__description {
+      width: 100%;
+      padding-right: 50px;
+    }
+
+    &__title::before {
+      width: 100px;
+      height: 100px;
+      top: -30px;
+      left: -170px;
+    }
+
+    &__title1::after {
+      width: 70px;
+      height: 97px;
+      background-image: url(../../app/img/cat-slim.svg);
+      left: -160px;
+      top: -40px;
+    }
+
+    &__title2::after {
+      width: 134px;
+      height: 56px;
+      background-image: url(../../app/img/cat-pro.svg);
+      left: -190px;
+      top: -10px;
+    }
+
+    &__link::after {
+      content: "";
+      right: -50px;
+      top: 5px;
+    }
+
   }
 }
