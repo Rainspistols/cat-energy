@@ -84,6 +84,14 @@
     text-transform: uppercase;
     position: relative;
     margin-right: 10px;
+
+    &:active {
+      color: rgba($color: #000000, $alpha: 0.3);
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
   }
 
   &__link::after {
@@ -101,7 +109,8 @@
 
 @media (min-width:$tablet-width) {
   .nutrition-goal {
-    width: 710px;
+    width: 92.44%;
+    max-width: 1220px;
     margin: auto;
 
     &__list {
@@ -149,22 +158,25 @@
       width: 200px;
       height: 200px;
       top: 25px;
-      left: 400px;
+      left: auto;
+      right: 60px;
     }
 
     &__title1::after {
       width: 140px;
       height: 194px;
       background-image: url(../../app/img/cat-slim.svg);
-      left: 420px;
+      left: auto;
       top: 5px;
+      right: 100px;
     }
 
     &__title2::after {
       width: 268px;
       height: 112px;
       background-image: url(../../app/img/cat-pro.svg);
-      left: 370px;
+      left: auto;
+      right: 40px;
       top: 80px;
     }
 
@@ -249,3 +261,4 @@
 
   }
 }
+

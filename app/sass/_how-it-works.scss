@@ -80,7 +80,8 @@
   .how-it-works {
     box-sizing: border-box;
     padding: 0;
-    width: 710px;
+    width: 92.44%;
+    max-width: 1220px;
     margin: auto;
 
     &__title {
@@ -98,16 +99,24 @@
     }
 
     &__item {
-      width: 225px;
+      width: 50%;
       margin-bottom: 250px;
-      margin-right: 110px;
+      padding-right: 140px;
+      box-sizing: border-box;
       font-size: 16px;
       line-height: 24px;
       align-items: flex-start;
     }
 
     &__item:nth-child(2n) {
-      margin-right: 70px;
+      padding-left: 30px;
+      margin-right: 0;
+      &::before {
+        left: 30px;
+      }
+      &::after {
+        left: 56px;
+      }
     }
 
     &__item:nth-child(3n) {
@@ -139,14 +148,12 @@
       color: #f2f2f2;
       font-family: 'Oswald', sans-serif, Arial;
       z-index: -1;
-      right: -10px;
+      right: 110px;
       top: -140px;
     }
     &__wrap {
       border-bottom: 1px solid #e6e6e6;
     }
-
-
   }
 }
 
@@ -159,21 +166,18 @@
       margin-bottom: 50px;
     }
     &__item {
-      width: 245px;
+      width: 25%;
       margin-right: 0;
       box-sizing: border-box;
-      margin-right: 80px;
       margin-bottom: 0;
       height: 100%;
-    }
-    &__item:nth-child(2n) {
-      margin-right: 80px;
+      padding-right: 40px;
     }
     &__item:last-child {
       margin-right: 0;
     }
     &__number {
-      right: 0;
+      right: 50px;
     }
     &__wrap {
       border-bottom: none;

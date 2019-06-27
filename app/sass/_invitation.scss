@@ -33,7 +33,8 @@
 
 @media (min-width:$tablet-width) {
   .invitation {
-    width: 710px;
+    width: 92.44%;
+    max-width: 1220px;
     padding: 65px 40px;
     margin: auto;
     &__title {

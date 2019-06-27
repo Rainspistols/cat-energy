@@ -1,13 +1,27 @@
 .main-footer {
   background-color: #f2f2f2;
+  &__wrap {
+  background-color: #f2f2f2;
   margin-top: -3px;
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
+  }
   &__image-logo {
     display: block;
     margin: auto;
     padding: 38px 0 30px;
+    &:hover,
+    &:focus {
+      path {
+        fill: #68b738;
+      }
+    }
+    &:active {
+      path {
+        opacity: 0.3;
+      }
+    }
   }
   &__site-author {
     text-align: center;
@@ -21,16 +35,33 @@
     box-sizing: border-box;
     text-transform: uppercase;
     color: #767676;
+    text-decoration: none;
+    display: block;
+    &:hover,
+    &:focus {
+      color: #68b738;
+    }
+    &:active {
+      opacity: 0.3;
+    }
+  }
+  &__wrap {
+    background-color: #f2f2f2;
   }
 }
 
 @media (min-width: $tablet-width) {
   .main-footer {
+    &__wrap {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 60px 0;
     align-items: center;
+    width: 92.44%;
+    max-width: 1220px;
+    margin: auto;
+  }
     &__image-logo,
     &__site-author {
       padding: 0;

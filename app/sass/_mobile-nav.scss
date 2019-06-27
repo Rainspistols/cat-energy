@@ -14,9 +14,16 @@
 
   &__item {
     text-align: center;
-    padding: 22px 0;
     border-top: 1px solid #e6e6e6;
     box-sizing: border-box;
+
+    a {
+      color: black;
+      width: 100%;
+      height: 100%;
+      display: block;
+      padding: 22px 0;
+    }
   }
 
   &__link {
@@ -25,48 +32,73 @@
 }
 
 
+@media(max-width:$only-mobile-width) {
+  .mobile-nav {
+    margin-bottom: 10px;
+    &__item:last-child {
+      border-bottom:1px solid #e6e6e6;
+    }
+    a:hover,
+    a:focus {
+      color: rgba($color: #000000, $alpha: 0.7);
+    }
+    a:active {
+      color: rgba($color: #000000, $alpha: 0.3);
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .mobile-nav {
     display: flex;
-    width: 100%;
+    width: auto;
+
     &__list {
       flex-wrap: nowrap;
       flex-direction: row;
       display: flex;
       height: 100%;
+      align-items: center;
     }
+
     &__item {
       width: auto;
-      flex-grow: 1;
-      padding: 0;
       align-items: center;
       border: none;
       display: flex;
       justify-content: center;
+      a {
+        padding: 0 20px;
+      }
     }
-    &__item:focus,
-    &__item:hover {
+
+    &__link[href]:focus,
+    &__link[href]:hover {
       opacity: 0.7;
     }
-    &__item:active {
+
+    &__link[href]:active {
       opacity: 0.3;
     }
+
     &__link {
       color: black;
       font-size: 18px;
       line-height: 24px;
     }
+
     &__link--current {
       position: relative;
     }
+
     &__link--current::after {
       content: "";
-      width: 100%;
       height: 2px;
       background-color: #68b738;
       position: absolute;
-      bottom:  -12px;
-      left: 0;
+      bottom: -15px;
+      left: 20px;
+      right: 20px;
     }
   }
 }
@@ -77,13 +109,16 @@
     width: 40%;
     z-index: 2;
     background-color: transparent;
+
     &__item {
       font-size: 20px;
       line-height: 20px;
+      a {
+        color: #ffffff;
+        white-space: nowrap;
+      }
     }
-    &__link {
-      color: white;
-    }
+
     &__link--current::after {
       background-color: white;
     }

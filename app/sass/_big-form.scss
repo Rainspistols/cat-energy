@@ -23,7 +23,8 @@
 
 @media (min-width:$tablet-width) {
   .big-form {
-    width: 710px;
+    width: 92.44%;
+    max-width: 1220px;
     margin-left: auto;
     margin-right: auto;
     &__title {
@@ -31,7 +32,8 @@
       line-height: 60px;
       margin-bottom: 50px;
       padding: 0;
-      width: 710px;
+      width: 92.44%;
+      max-width: 1220px;
       margin-left: auto;
       margin-right: auto;
       border: none;

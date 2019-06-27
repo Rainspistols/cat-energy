@@ -64,7 +64,11 @@
 @media (min-width:$tablet-width) {
   .additional-goods {
     padding-top: 0;
-    width: 710px;
+    width: 92.44%;
+    max-width: 1220px;
+    margin-left: auto;
+
+margin-right: auto;
     &__title {
       font-size: 36px;
       line-height: 36px;
