@@ -62,18 +62,16 @@
 
     &__logo-img {
       margin-right: 15px;
+      width: 202px;
+      height: 59px;
     }
 
     &__button {
       display: none;
     }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .mobile-closed {
-    &__logo-link {
-      width: 50%;
+    &__logo-name {
+      display: none;
     }
   }
 }
+

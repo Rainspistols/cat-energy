@@ -97,6 +97,15 @@ body {
   min-width: 320px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+picture {
+  margin: auto;
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);

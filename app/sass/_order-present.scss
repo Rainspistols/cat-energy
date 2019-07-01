@@ -24,12 +24,13 @@
 @media (min-width:$tablet-width) {
   .order-present {
     background-image: url(../../app/img/gift-photo-tablet.jpg);
-    width: 100%;
+    width: 681px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     height: 200px;
     margin-bottom: 75px;
+    background-repeat: no-repeat;
     &__description {
       width: 170px;
       margin-bottom: 0;

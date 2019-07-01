@@ -122,5 +122,8 @@
     &__link--current::after {
       background-color: white;
     }
+    &__link { 
+      font-size: 20px;
+    }
   }
 }

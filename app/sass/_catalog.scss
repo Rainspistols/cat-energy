@@ -62,7 +62,7 @@
 @media (min-width:$tablet-width) {
   .catalog {
     width: 92.44%;
-      max-width: 1220px;
+    max-width: 1220px;
     margin-left: auto;
     margin-right: auto;
 
@@ -90,29 +90,22 @@
       width: 45.77%;
       box-sizing: border-box;
       margin-bottom: 140px;
-      padding: 165px 35px 40px;
+      padding: 0px 35px 40px;
       background-color: #f2f2f2;
     }
     &__item:nth-last-child(2) {
       margin-bottom: 70px;
     }
+    &__img {
+      bottom: 325px;
+    }
 
     &__img1 {
-      width: 324px;
-      height: 172px;
-      position: absolute;
-      top: -50px;
-      left: calc(50% - 162px);
-      margin-left: 0;
+    margin-top: -70px;
     }
 
     &__img2 {
-      width: 324px;
-      height: 208px;
-      left: calc(50% - 162px);
-      position: absolute;
-      top: -86px;
-      margin-left: 0;
+      margin-top: -103px;
     }
 
     &__button {

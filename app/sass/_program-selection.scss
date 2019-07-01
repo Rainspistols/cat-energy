@@ -66,6 +66,9 @@
 
 @media (min-width:$desktop-width) {
   .program-selection {
+    &__header {
+      padding: 0;
+    }
     &__wrap-nameweight {
       display: flex;
       justify-content: space-between;
