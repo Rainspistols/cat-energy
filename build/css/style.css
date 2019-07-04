@@ -164,7 +164,7 @@
   width: 100%; }
 
 .personal-programm {
-  background-image: url(../../app/img/index-background-mobile.jpg);
+  background-image: url(../../build/img/index-background-mobile.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   min-height: 305px;
@@ -197,7 +197,7 @@
 @media (min-width: 768px) {
   .personal-programm {
     padding: 0;
-    background-image: url(../../app/img/index-can-tablet.jpg);
+    background-image: url(../../build/img/index-can-tablet.jpg);
     width: 710px;
     margin: auto;
     height: 615px;
@@ -236,7 +236,7 @@
 
 @media (min-width: 1440px) {
   .personal-programm {
-    background-image: url(../../app/img/index-background-desktop.jpg);
+    background-image: url(../../build/img/index-background-desktop.jpg);
     width: 50%;
     margin-top: 0;
     position: absolute;
@@ -301,14 +301,14 @@
 .nutrition-goal__title1::after {
   width: 35px;
   height: 49px;
-  background-image: url(../../app/img/cat1.svg);
+  background-image: url(../../build/img/cat1.svg);
   left: 7px;
   top: -9px; }
 
 .nutrition-goal__title2::after {
   width: 67px;
   height: 28px;
-  background-image: url(../../app/img/cat2.svg);
+  background-image: url(../../build/img/cat2.svg);
   left: -9px;
   top: 3px; }
 
@@ -342,7 +342,7 @@
   content: "";
   width: 24px;
   height: 11px;
-  background-image: url(../../app/img/arrow-long.svg);
+  background-image: url(../../build/img/arrow-long.svg);
   position: absolute;
   right: -32px;
   top: 7px; }
@@ -391,14 +391,14 @@
     .nutrition-goal__title1::after {
       width: 140px;
       height: 194px;
-      background-image: url(../../app/img/cat-slim.svg);
+      background-image: url(../../build/img/cat-slim.svg);
       left: auto;
       top: 5px;
       right: 100px; }
     .nutrition-goal__title2::after {
       width: 268px;
       height: 112px;
-      background-image: url(../../app/img/cat-pro.svg);
+      background-image: url(../../build/img/cat-pro.svg);
       left: auto;
       right: 40px;
       top: 80px; }
@@ -443,13 +443,13 @@
     .nutrition-goal__title1::after {
       width: 70px;
       height: 97px;
-      background-image: url(../../app/img/cat-slim.svg);
+      background-image: url(../../build/img/cat-slim.svg);
       left: -160px;
       top: -40px; }
     .nutrition-goal__title2::after {
       width: 134px;
       height: 56px;
-      background-image: url(../../app/img/cat-pro.svg);
+      background-image: url(../../build/img/cat-pro.svg);
       left: -190px;
       top: -10px; }
     .nutrition-goal__link::after {
@@ -500,13 +500,13 @@
     background-position: 0 0;
     background-repeat: no-repeat; }
   .how-it-works__item1::after {
-    background-image: url(../../app/img/advantage-1.png); }
+    background-image: url(../../build/img/advantage-1.png); }
   .how-it-works__item2::after {
-    background-image: url(../../app/img/advantage-2.png); }
+    background-image: url(../../build/img/advantage-2.png); }
   .how-it-works__item3::after {
-    background-image: url(../../app/img/advantage-3.png); }
+    background-image: url(../../build/img/advantage-3.png); }
   .how-it-works__item4::after {
-    background-image: url(../../app/img/advantage-4.png); }
+    background-image: url(../../build/img/advantage-4.png); }
   .how-it-works__number {
     display: none; }
 
@@ -1312,13 +1312,13 @@
   .cat-owner-information__label1::after {
     width: 17px;
     height: 13px;
-    background-image: url(../../app/img/mail.svg);
+    background-image: url(../../build/img/mail.svg);
     right: 32px;
     top: 16px; }
   .cat-owner-information__label2::after {
     width: 20px;
     height: 20px;
-    background-image: url(../../app/img/phone.svg);
+    background-image: url(../../build/img/phone.svg);
     right: 27px;
     top: 13px; }
 
@@ -1935,7 +1935,7 @@
   width: 280px;
   height: 290px;
   margin: auto;
-  background-image: url(../../app/img/gift-photo-mobile.jpg);
+  background-image: url(../../build/img/gift-photo-mobile.jpg);
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -1959,7 +1959,7 @@
 
 @media (min-width: 768px) {
   .order-present {
-    background-image: url(../../app/img/gift-photo-tablet.jpg);
+    background-image: url(../../build/img/gift-photo-tablet.jpg);
     width: 681px;
     display: flex;
     flex-direction: row;
@@ -1983,7 +1983,7 @@
     margin-top: 5px;
     display: flex;
     flex-direction: column;
-    background-image: url(../../app/img/gift-photo-desktop.jpg); }
+    background-image: url(../../build/img/gift-photo-desktop.jpg); }
     .order-present__img {
       margin: auto;
       margin-top: 50px;
@@ -2003,7 +2003,7 @@
     position: absolute;
     width: 62px;
     height: 53px;
-    background-image: url(../../app/img/map-pin.png);
+    background-image: url(../../build/img/map-pin.png);
     background-position: 0 0;
     background-repeat: no-repeat;
     top: 50%;

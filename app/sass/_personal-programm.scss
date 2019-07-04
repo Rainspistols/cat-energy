@@ -1,5 +1,5 @@
 .personal-programm {
-  background-image: url(../../app/img/index-background-mobile.jpg);
+  background-image: url(../../build/img/index-background-mobile.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   min-height: 305px;
@@ -36,7 +36,7 @@
 @media (min-width:$tablet-width) {
   .personal-programm {
     padding: 0;
-    background-image: url(../../app/img/index-can-tablet.jpg);
+    background-image: url(../../build/img/index-can-tablet.jpg);
     width: 710px;
     margin: auto;
     height: 615px;
@@ -81,7 +81,7 @@
 
 @media (min-width:$desktop-width) {
   .personal-programm {
-    background-image: url(../../app/img/index-background-desktop.jpg);
+    background-image: url(../../build/img/index-background-desktop.jpg);
     width: 50%;
     margin-top: 0;
     position: absolute;

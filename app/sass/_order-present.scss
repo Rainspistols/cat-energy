@@ -2,7 +2,7 @@
   width: 280px;
   height: 290px;
   margin: auto;
-  background-image: url(../../app/img/gift-photo-mobile.jpg);
+  background-image: url(../../build/img/gift-photo-mobile.jpg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +23,7 @@
 
 @media (min-width:$tablet-width) {
   .order-present {
-    background-image: url(../../app/img/gift-photo-tablet.jpg);
+    background-image: url(../../build/img/gift-photo-tablet.jpg);
     width: 681px;
     display: flex;
     flex-direction: row;
@@ -51,7 +51,7 @@
     margin-top: 5px;
     display: flex;
     flex-direction: column;
-    background-image: url(../../app/img/gift-photo-desktop.jpg);
+    background-image: url(../../build/img/gift-photo-desktop.jpg);
     &__img {
       margin: auto;
       margin-top: 50px;
