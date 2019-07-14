@@ -38,11 +38,11 @@
     &__item:last-child {
       border-bottom:1px solid #e6e6e6;
     }
-    a:hover,
-    a:focus {
+    a[href]:hover,
+    a[href]:focus {
       color: rgba($color: #000000, $alpha: 0.7);
     }
-    a:active {
+    a[href]:active {
       color: rgba($color: #000000, $alpha: 0.3);
     }
   }
@@ -69,6 +69,7 @@
       justify-content: center;
       a {
         padding: 0 20px;
+        white-space: nowrap;
       }
     }
 
@@ -115,14 +116,13 @@
       line-height: 20px;
       a {
         color: #ffffff;
-        white-space: nowrap;
       }
     }
 
     &__link--current::after {
       background-color: white;
     }
-    &__link { 
+    &__link {
       font-size: 20px;
     }
   }

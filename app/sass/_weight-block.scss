@@ -12,6 +12,7 @@
     text-transform: uppercase;
     margin-bottom: 25px;
     position: relative;
+    cursor: pointer;
   }
   &__label:last-child {
     margin-bottom: 0;
@@ -19,7 +20,6 @@
   &__input {
     position: absolute;
     opacity: 0;
-    cursor: pointer;
     height: 0;
     width: 0;
   }

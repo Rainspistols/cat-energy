@@ -67,7 +67,7 @@
   &__label1::after {
     width: 17px;
     height: 13px;
-    background-image: url(../../build/img/mail.svg);
+    background-image: url(../img/mail.svg);
     right: 32px;
     top: 16px;
   }
@@ -75,7 +75,7 @@
   &__label2::after {
     width: 20px;
     height: 20px;
-    background-image: url(../../build/img/phone.svg);
+    background-image: url(../img/phone.svg);
     right: 27px;
     top: 13px;
   }
@@ -141,6 +141,10 @@
       width: 570px;
       margin-bottom: 0;
       padding-left: 0;
+      padding-right: 0;
+    }
+    &__label::after {
+      right: 15px;
     }
 
     &__label-wrap {

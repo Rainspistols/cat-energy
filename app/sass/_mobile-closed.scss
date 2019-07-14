@@ -36,6 +36,7 @@
 
   &__logo-img {
     margin-right: 55px;
+    box-sizing: border-box;
   }
 
   &__logo-link:focus,
@@ -54,6 +55,9 @@
     cursor: pointer;
     width: calc(50% + 55.5px);
   }
+  &__button-img-closed {
+    cursor: pointer;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -61,9 +65,9 @@
     padding: 0;
 
     &__logo-img {
-      margin-right: 15px;
-      width: 202px;
-      height: 59px;
+      margin-right: auto;
+      width: 173px;
+      height: 58px;
     }
 
     &__button {
@@ -71,6 +75,19 @@
     }
     &__logo-name {
       display: none;
+    }
+    &__logo-link {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+@media(min-width:$desktop-width) {
+  .mobile-closed {
+    &__logo-img {
+      width: 202px;
+      height: 59px;
     }
   }
 }

@@ -65,10 +65,11 @@
       line-height: 30px;
     }
     &__textarea {
-      width: 630px;
       height: 175px;
       max-width: 630px;
       margin-left: 40px;
+      width: calc(100% - 80px);
+      max-width: auto;
     }
   }
 }
