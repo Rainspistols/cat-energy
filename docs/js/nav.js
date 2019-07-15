@@ -1,5 +1,5 @@
-var navBtn = document.querySelector(".mobile-closed__button");
-var navBlock = document.querySelector(".mobile-nav");
+let navBtn = document.querySelector(".mobile-closed__button");
+let navBlock = document.querySelector(".mobile-nav");
 
 navBtn.addEventListener("click", function () {
   if (navBlock.classList.contains("js-none")) {
