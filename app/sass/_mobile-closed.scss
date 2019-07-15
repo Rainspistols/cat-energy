@@ -13,6 +13,7 @@
     height: 18px;
     padding: 0;
     outline: none;
+    transition: 0.3s ease;
   }
 
   &__button:hover,
@@ -54,6 +55,7 @@
     align-items: center;
     cursor: pointer;
     width: calc(50% + 55.5px);
+    transition: 0.3s ease;
   }
   &__button-img-closed {
     cursor: pointer;
