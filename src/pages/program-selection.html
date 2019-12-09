@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="description" content="cat energy form" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap&subset=cyrillic" rel="stylesheet" />
+        <title>Choose the programm</title>
+        <link rel="stylesheet" href="/style.bundle.css" />
+    </head>
+
+    <body>
+        <header class="page-header page-header--pg">
+            <h1 class="visually-hidden">
+                Cat energy choose program
+            </h1>
+            <div class="mobile-closed">
+                <a href="index.html" class="mobile-closed__logo-link" title="open menu">
+                    <picture>
+                        <source media="(min-width:1440px)" srcset="../img/logo-desktop.svg" />
+                        <source media="(min-width:768px)" srcset="../img/logo-tablet.svg" />
+                        <img class="mobile-closed__logo-img" src="../img/logo-mobile.svg" alt="company logotype" width="33" height="38" />
+                    </picture>
+                    <img class="mobile-closed__logo-name" src="../img/logo-mobile-header.svg" alt="Cat energy" width="101" height="18" />
+                </a>
+                <button type="button" class="mobile-closed__button" title="open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="page-header__nav mobile-nav mobile-nav--pg js-none">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link" href="../index.html" title="go to home page">Home</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link" href="catalog.html" title="go to catalog page">Catalog</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link mobile-nav__link--current" title="go to programs page">Choose the program</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="program-selection__main">
+            <h2 class="big-form__title">
+                Program selection
+            </h2>
+            <form class="program-selection__big-form big-form" action="https://echo.htmlacademy.ru" method="post">
+                <p class="big-form__instruction">
+                    Fill out the form and we will find the nutrition program for your cat
+                </p>
+
+                <div class="program-selection__wrap-nameweight">
+                    <div class="big-form__name-block name-block">
+                        <label class="name-block__label name-block__label1">
+                            <span class="name-block__input-name">Name:*</span>
+                            <input class="name-block__input" type="text" name="name" placeholder="Bob" />
+                        </label>
+                        <label class="name-block__label name-block__label2">
+                            <span class="name-block__input-name">Weight (кг):*</span>
+                            <input class="name-block__input" type="number" name="weight" placeholder="7" step=".1" />
+                        </label>
+                        <label class="name-block__label name-block__label">
+                            <span class="name-block__input-name">Age (years):</span>
+                            <input class="name-block__input" type="number" name="age" placeholder="7" step=".1" />
+                        </label>
+                    </div>
+
+                    <div class="big-form__weight-block weight-block">
+                        <h2 class="visually-hidden">
+                            Your goals
+                        </h2>
+                        <label class="weight-block__label"
+                            >Slimming
+                            <input type="radio" class="weight-block__input" name="weight-status" value="weight-loss" checked />
+                            <span class="weight-block__checkmark"></span>
+                        </label>
+                        <label class="weight-block__label"
+                            >Gain weight
+                            <input type="radio" class="weight-block__input" name="weight-status" value="weight-gain" />
+                            <span class="weight-block__checkmark"></span>
+                        </label>
+                        <label class="weight-block__label"
+                            >Don`t know (Advice needed)
+                            <input type="radio" class="weight-block__input" name="weight-status" value="i-dont-know" />
+                            <span class="weight-block__checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="cat-owner-information">
+                    <div class="cat-owner-information__green-line-wrap">
+                        <h2 class="cat-owner-information__title">
+                            Contact information (cat owner)
+                        </h2>
+                    </div>
+                    <div class="cat-owner-information__label-wrap">
+                        <label class="cat-owner-information__label cat-owner-information__label1"
+                            >E-mail:*
+                            <input
+                                class="cat-owner-information__input"
+                                type="email"
+                                name="cat-owner-email"
+                                placeholder="kuklachev@gmail.com"
+                            />
+                        </label>
+                        <label class="cat-owner-information__label cat-owner-information__label2"
+                            >Phone:*
+                            <input class="cat-owner-information__input" type="tel" name="cat-owner-tel" placeholder="8 (960) 900-60-90" />
+                        </label>
+                    </div>
+                </div>
+
+                <div class="comment-block">
+                    <div class="comment-block__green-line-wrap">
+                        <h2 class="comment-block__title">
+                            Comment
+                        </h2>
+                    </div>
+                    <textarea
+                        class="comment-block__textarea"
+                        name="cats-behavior"
+                        title="comments"
+                        placeholder="Tell us about your cat's habits"
+                    ></textarea>
+                </div>
+
+                <div class="additional-info">
+                    <div class="additional-info__green-line-wrap">
+                        <h2 class="additional-info__title">
+                            Extra
+                        </h2>
+                    </div>
+                    <label class="additional-info__label"
+                        >Sweetener
+                        <input type="checkbox" name="food-nutritions" value="sugar-substitute" class="additional-info__input" checked />
+                        <span class="additional-info__checkmark"></span>
+                    </label>
+                    <label class="additional-info__label"
+                        >Drinking water
+                        <input type="checkbox" name="food-nutritions" value="potable-water" class="additional-info__input" />
+                        <span class="additional-info__checkmark"></span>
+                    </label>
+                    <label class="additional-info__label"
+                        >Milk
+                        <input type="checkbox" name="food-nutritions" value="milk" class="additional-info__input" />
+                        <span class="additional-info__checkmark"></span>
+                    </label>
+                    <label class="additional-info__label"
+                        >Vitamins
+                        <input type="checkbox" name="food-nutritions" value="vitamins" class="additional-info__input" />
+                        <span class="additional-info__checkmark"></span>
+                    </label>
+                </div>
+
+                <div class="program-selection__button-wrap">
+                    <button class="button68b738 program-selection__button" type="submit" aria-label="send request">
+                        Send request
+                    </button>
+                    <p class="program-selection__mandatory-field">
+                        * — Required fields
+                    </p>
+                </div>
+            </form>
+
+            <div class="program-selection__invitation-wrap">
+                <section class="invitation program-selection__invitation">
+                    <h2 class="invitation__title">
+                        We invite dealers to cooperate!
+                    </h2>
+                    <p class="invitation__adress">
+                        ул. Большая Конюшенная, д. 19/8
+                        <span class="invitation__space">1</span>
+                        Санкт-Петербург
+                    </p>
+                </section>
+            </div>
+
+            <div class="google-map">
+                <section class="invitation page-main__invitation google-map__invitation">
+                    <h2 class="invitation__title">
+                        We invite dealers to cooperate!
+                    </h2>
+                    <p class="invitation__adress">
+                        ул. Большая Конюшенная, д. 19/8<br /><br />
+                        Санкт-Петербург
+                    </p>
+                </section>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2445.1998143444616!2d20.950442215891588!3d52.20341626739473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471933554fcb36a5%3A0x5d726b966baa6cc3!2sDrawska+10B%2C+02-001+Warszawa!5e0!3m2!1sru!2spl!4v1560005327264!5m2!1sru!2spl"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    style="border:0"
+                    allowfullscreen
+                    title="street Drawska 10B"
+                ></iframe>
+            </div>
+        </main>
+        <footer class="main-footer">
+            <div class="main-footer__wrap">
+                <a href="../index.html" class="main-footer__logo-link" title="go to home page">
+                    <svg
+                        class="main-footer__image-logo"
+                        version="1.2"
+                        baseProfile="tiny"
+                        width="128"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 127.8 23.4"
+                    >
+                        <g fill="#111">
+                            <path
+                                d="M1.6 21.5C.6 20.2 0 18.3 0 15.9V7.6c0-2.5.5-4.4 1.5-5.7C2.6.6 4.3 0 6.8 0c2.4 0 4.1.6 5.1 1.7s1.5 2.8 1.5 4.9v2H8.5V6.3c0-.9-.1-1.6-.3-2s-.6-.8-1.4-.8c-.7 0-1.2.2-1.4.7s-.3 1.3-.3 2.2v10.7c0 .9.1 1.6.4 2.1.2.5.7.7 1.4.7s1.1-.2 1.3-.7.3-1.2.3-2.1v-2.4h4.9v2c0 2.1-.5 3.8-1.5 5s-2.7 1.8-5.1 1.8c-2.4-.1-4.2-.7-5.2-2zM19.3.3H25l4.2 22.8h-4.6l-.8-4.8h-3.3l-.8 4.8H15L19.3.3zm4.1 15l-1.2-8.9-1.2 8.9h2.4zM32.7 4.1h-3.4V.3h11.9V4h-3.4v19.1h-5.1v-19zM50.3.3h8.8v2.4h-5.7v7.5H58v2.3h-4.6v8.4h5.7v2.3h-8.9V.3h.1zM61.7.3h2.2l6.5 15.1V.3H73v22.8h-2L64.4 7.5v15.6h-2.7V.3zM76 .3h8.8v2.4h-5.7v7.5h4.6v2.3h-4.6v8.4h5.7v2.3H76V.3zM87.4.3H92c2.3 0 4 .5 5.1 1.4s1.6 2.5 1.6 4.6c0 2.9-.9 4.7-2.8 5.3L99.1 23H96l-3-10.7h-2.5V23h-3.2L87.4.3zm4.4 9.8c1.4 0 2.3-.3 2.9-.8s.9-1.5.9-3c0-.9-.1-1.7-.3-2.2-.2-.5-.6-.9-1.1-1.2s-1.3-.4-2.2-.4h-1.4V10h1.2v.1zM102.7 21.4c-.9-1.3-1.4-3.2-1.4-5.8V8c0-1.8.2-3.2.5-4.3.4-1.1 1-2 1.9-2.6s2.1-.9 3.7-.9c2.1 0 3.6.5 4.5 1.6s1.4 2.7 1.4 5v.8h-3v-.7c0-1.1-.1-1.9-.2-2.5s-.4-1-.8-1.3-1-.5-1.9-.5-1.5.2-2 .6-.7.9-.8 1.6-.2 1.6-.2 2.7V16c0 1.7.2 3 .6 3.8s1.2 1.1 2.4 1.1 2-.4 2.4-1.2c.4-.8.7-2.1.7-4v-1.6h-2.9v-2.3h5.8v11.3h-2l-.3-2.6c-.7 1.9-2.1 2.9-4.1 2.9-1.9 0-3.4-.7-4.3-2zM119.8 15.1L114.9.4h3l3.5 11 3.4-11h3l-4.9 14.7v8h-3l-.1-8z"
+                            />
+                        </g>
+                    </svg>
+                </a>
+                <ul class="socials">
+                    <li class="socials__item socials__item--vk">
+                        <a href="#" class="socials__link" aria-label="vk">
+                            <svg
+                                class="socials__svg--vk"
+                                width="22"
+                                height="18"
+                                version="1.2"
+                                baseProfile="tiny"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 22 12"
+                                xml:space="preserve"
+                            >
+                                <g>
+                                    <path
+                                        fill="#666666"
+                                        d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9
+      c-0.2,0.1-0.4,0.7-0.3,1.2c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4l-1.4,0c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2
+      C0,1.6-0.1,1.2,0.2,0.9c0.3-0.3,0.8-0.4,1-0.4l3,0l0.1,0c0.1,0,0.4,0.1,0.7,0.3c0.3,0.2,0.4,0.5,0.5,0.6c0,0,0.5,1.1,1.1,2
+      c1,1.5,1.4,1.9,1.5,2C8.2,5,8.3,4,8.2,3.1c0-0.4-0.1-0.8-0.2-1C7.9,2,7.7,1.9,7.5,1.9L6.9,1.4C6.9,0.9,7.4,0.5,7.8,0.3
+      C8.3,0.1,9.1,0,10.1,0l0.5,0c0.9,0,1.2,0.1,1.6,0.1c1.2,0.3,1.2,1.3,1.1,2.5c0,0.4,0,0.8,0,1.2c0,0.1,0,0.2,0,0.4
+      c0,0.3,0,0.8,0.1,1c0.2-0.1,0.6-0.5,1.5-1.9c0.6-0.9,1-1.9,1.1-2.1l0,0c0.1-0.3,0.4-0.7,1.2-0.7l3.1,0c0,0,0.1,0,0.3,0
+      c0.7,0,1.2,0.2,1.3,0.7c0.2,0.5,0.1,1.3-1.7,3.5c-0.3,0.3-0.5,0.6-0.7,0.9C19,6,18.6,6.6,18.6,6.7c0,0.1,0.5,0.5,0.9,0.9
+      c1.1,0.9,1.9,1.7,2.2,2.3c0.4,0.6,0.3,1,0.2,1.3c-0.3,0.7-1.2,0.7-1.4,0.8l-2.8,0C17.7,12,17.6,12,17.6,12z M13.7,8.3
+      c0.7,0,1.2,0.6,1.8,1.2c0.4,0.4,0.7,0.8,1.1,1c0.5,0.3,1,0.3,1,0.3l0.1,0l2.8,0c0.1,0,0.3-0.1,0.4-0.1c0,0,0-0.1-0.1-0.1
+      c-0.3-0.5-1-1.3-2-2.1c-0.9-0.7-1.3-1.1-1.4-1.7c0-0.6,0.4-1.1,1.2-2.1c0.2-0.2,0.4-0.5,0.7-0.8c1.1-1.4,1.4-2,1.5-2.3
+      c-0.1,0-0.5,0-0.5,0l-3.2,0c-0.1,0-0.2,0-0.2,0C16.9,2,16.4,3.1,15.8,4c-1.4,2.1-2,2.4-2.5,2.4c-0.1,0-0.3,0-0.4-0.1
+      c-0.7-0.4-0.7-1.4-0.7-2.1c0-0.1,0-0.2,0-0.3c0-0.5,0-0.9,0-1.3c0.1-1.3,0-1.3-0.3-1.4c-0.3-0.1-0.5-0.1-1.4-0.1l-0.5,0
+      c-0.5,0-1,0-1.4,0.1c0.1,0.1,0.1,0.1,0.2,0.2c0.4,0.5,0.4,1.5,0.4,1.7c0.1,1.3,0,2.9-0.7,3.3C8.4,6.4,8.3,6.5,8.1,6.5
+      C7.5,6.5,6.8,5.8,5.6,4C5,2.9,4.5,1.8,4.5,1.8c0,0,0-0.1-0.1-0.1c-0.1,0-0.2-0.1-0.2-0.1l-2.9,0c0,0,0,0-0.1,0
+      c0.4,0.9,2.5,5,4.8,7.2c2,1.9,4.3,2,4.7,2l1.4,0c0,0,0.2,0,0.2-0.1c0,0,0,0,0-0.1c0-0.2,0-2,1.2-2.3C13.5,8.3,13.6,8.3,13.7,8.3z"
+                                    />
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item socials__item--instagram">
+                        <a href="#" class="socials__link" aria-label="instagram" title="follow us on the Instagram">
+                            <svg
+                                class="socials__svg--instagram"
+                                width="16"
+                                height="16"
+                                version="1.2"
+                                baseProfile="tiny"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 16 16"
+                                xml:space="preserve"
+                            >
+                                <path
+                                    fill="#666666"
+                                    d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1
+           L11.8,1 M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0L11.8,0z"
+                                />
+                                <path
+                                    fill="#666666"
+                                    d="M8,4.9c1.7,0,3.1,1.4,3.1,3.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1C4.9,6.3,6.3,4.9,8,4.9 M8,3.9
+           C5.7,3.9,3.9,5.7,3.9,8s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S10.3,3.9,8,3.9L8,3.9z"
+                                />
+                                <circle fill="#666666" cx="12.3" cy="3.7" r="0.9" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item socials__item--facebook">
+                        <a href="#" class="socials__link" aria-label="facebook" title="follow us on the Facebook">
+                            <svg
+                                class="socials__svg--facebook"
+                                width="10"
+                                height="19"
+                                version="1.2"
+                                baseProfile="tiny"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 10 19"
+                            >
+                                <path
+                                    fill="#666"
+                                    d="M7.1 19H2v-8.8H0V5.8h1.9c-.1-2 .2-3.4 1.1-4.4C3.8.5 5 .1 6.5 0H10v4.2H7.2c-.1.2-.2.8-.2 1.6h3v4.4H7.1V19zm-4-1h2.8V9.1h2.9V6.8H5.9v-.5c0-1.4 0-2.6.7-3.1l.1-.1h2.1V1H6.5c-1.2.1-2 .4-2.6 1-.8.8-1 2.3-.8 4.2l.1.6H1.1v2.3h2V18z"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <a href="https://github.com/Rainspistols" class="main-footer__site-author" rel="noopener" target="_blank">Rainspistols</a>
+            </div>
+        </footer>
+
+        <script src="/main.bundle.js"></script>
+    </body>
+</html>

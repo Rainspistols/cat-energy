@@ -1,0 +1,109 @@
+.mobile-closed {
+    position: relative;
+    padding: 11px 20px 16px 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__button {
+        background-color: transparent;
+        border: none;
+        width: 25px;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        transition: 0.3s ease;
+        cursor: pointer;
+        font-size: 20px;
+        span {
+            pointer-events: none;
+            height: 4px;
+            background-color: #333;
+            margin: 4px 0 0;
+            transition: 0.4s;
+            display: inline-flex;
+        }
+        &.active {
+            span:nth-child(1) {
+                transform: rotate(-45deg) translate(-8px, 4px);
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:nth-child(3) {
+                transform: rotate(45deg) translate(-7px, -4px);
+            }
+        }
+    }
+
+    &__nav {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__button-img-open {
+        display: none;
+    }
+
+    &__logo-img {
+        margin-right: 55px;
+        box-sizing: border-box;
+    }
+
+    &__logo-link:focus,
+    &__logo-link:hover {
+        opacity: 0.7;
+    }
+
+    &__logo-link:active {
+        opacity: 0.3;
+    }
+
+    &__logo-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        width: calc(50% + 55.5px);
+        transition: 0.3s ease;
+    }
+    &__button-img-closed {
+        cursor: pointer;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .mobile-closed {
+        padding: 0;
+
+        &__logo-img {
+            margin-right: auto;
+            width: 173px;
+            height: 58px;
+        }
+
+        &__button {
+            display: none;
+        }
+        &__logo-name {
+            display: none;
+        }
+        &__logo-link {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .mobile-closed {
+        &__logo-img {
+            width: 202px;
+            height: 59px;
+        }
+    }
+}

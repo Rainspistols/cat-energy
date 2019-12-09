@@ -1,0 +1,11 @@
+.google-map {
+    width: 100%;
+    height: 360px;
+    position: relative;
+}
+
+@media (min-width: $tablet-width) {
+    .google-map {
+        height: 400px;
+    }
+}

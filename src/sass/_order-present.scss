@@ -1,0 +1,67 @@
+.order-present {
+    width: 280px;
+    height: 290px;
+    margin: auto;
+    background-image: url(../img/gift-photo-mobile.webp);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__img {
+        margin: auto;
+        width: 55px;
+        height: 60px;
+        margin-bottom: 65px;
+    }
+    &__description {
+        bottom: 40px;
+        @include font-arial__16-20-400-ffffff;
+        width: 60%;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .order-present {
+        background-image: url(../img/gift-photo-tablet.webp);
+        width: 681px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 200px;
+        margin-bottom: 75px;
+        background-repeat: no-repeat;
+        &__description {
+            width: 170px;
+            margin-bottom: 0;
+            margin-right: 125px;
+        }
+        &__img {
+            margin-left: 90px;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .order-present {
+        float: right;
+        width: 250px;
+        height: 290px;
+        margin-bottom: 0;
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        background-image: url(../img/gift-photo-desktop.webp);
+        &__img {
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 65px;
+        }
+        &__description {
+            width: 60%;
+            text-align: center;
+            margin-bottom: 45px;
+            margin: auto;
+        }
+    }
+}

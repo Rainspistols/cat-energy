@@ -1,78 +1,124 @@
-let gulp = require("gulp"),
-  sass = require("gulp-sass"),
-  watch = require("gulp-watch"),
-  imagemin = require('gulp-imagemin'),
-  autoprefixer = require('autoprefixer'),
-  postcss = require('gulp-postcss'),
-  csso = require('gulp-csso'),
-  rename = require("gulp-rename"),
-  del = require("del");
+const { watch, src, dest, series, parallel } = require('gulp');
+const browserSync = require('browser-sync').create();
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const del = require('del');
+const postcss = require('gulp-postcss');
+const sass = require('gulp-sass');
+const autoprefixer = require('autoprefixer');
+const webpackStream = require('webpack-stream');
+const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
+const webp = require('imagemin-webp');
+const extReplace = require('gulp-ext-replace');
+const csso = require('gulp-csso');
 
+const CONFIG = {
+    src: {
+        js: ['./src/js/**/*.js'],
+        sass: './src/sass/**/*.scss',
+        images: './src/img/**/*.*',
+        html: './src/**/*.html',
+        pngJpeg: './src/img/*.{jpg,png}'
+    },
+    docs: {
+        base: './docs/',
+        images: './docs/img/',
+        js: './docs/main.bundle.js'
+    }
+};
 
-gulp.task('styles', function () {
-  return gulp.src('app/sass/**/*.scss')
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer(['last 15 versions'])
-    ]))
-    .pipe(gulp.dest("app/css"))
-    .pipe(csso())
-    .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("app/css"));
-});
+function cssTask(done) {
+    src(CONFIG.src.sass)
+        .pipe(sass())
+        .pipe(rename({ suffix: '.bundle' }))
+        .pipe(postcss([autoprefixer()]))
+        .pipe(csso())
+        .pipe(dest(CONFIG.docs.base));
 
+    done();
+}
 
-gulp.task('img', function () {
-  return gulp.src("app/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([
-      imagemin.gifsicle({
-        interlaced: true
-      }),
-      imagemin.jpegtran({
-        progressive: true
-      }),
-      imagemin.optipng({
-        optimizationLevel: 3
-      }),
-      imagemin.svgo({
-        plugins: [{
-            removeViewBox: true
-          },
-          {
-            cleanupIDs: false
-          }
-        ]
-      })
-    ]))
-    .pipe(gulp.dest("docs/img"));
-});
+function jsTask(done) {
+    src(CONFIG.src.js)
+        .pipe(
+            webpackStream({
+                output: {
+                    filename: 'main.js'
+                },
+                module: {
+                    rules: [
+                        {
+                            test: /\.(js)$/,
+                            exclude: /(node_modules)/,
+                            loader: 'babel-loader',
+                            query: {
+                                presets: ['@babel/preset-env']
+                            }
+                        }
+                    ]
+                }
+            })
+        )
+        .pipe(rename({ suffix: '.bundle' }))
+        .pipe(uglify())
+        .pipe(dest(CONFIG.docs.base));
 
-gulp.task('copy', function () {
-  return gulp.src([
-      "app/fonts/**/*.{woff,woff2}",
-      "app/js/**",
-      "app/pages/*.html",
-      "app/*.html",
-      "app/css/*.css",
-      "app/css/*.min.css"
-    ], {
-      base: "app"
-    })
-    .pipe(gulp.dest("docs"));
-});
+    done();
+}
 
-gulp.task('clean', function () {
-  return del('docs');
-});
+function templateTask(done) {
+    src(CONFIG.src.html)
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(dest(CONFIG.docs.base));
+    done();
+}
 
-gulp.task('sass', function () {
-  return gulp.src('app/sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest("docs/css"));
-})
+function imagesTask(done) {
+    src(CONFIG.src.images)
+        .pipe(imagemin())
+        .pipe(dest(CONFIG.docs.images));
+    done();
+}
 
-gulp.task('watch', function () {
-  gulp.watch('app/sass/**/*.scss', gulp.series('styles'));
-});
+function imagesTaskWebp(done) {
+    src(CONFIG.src.pngJpeg)
+        .pipe(
+            imagemin([
+                webp({
+                    quality: 75
+                })
+            ])
+        )
+        .pipe(extReplace('.webp'))
+        .pipe(dest(CONFIG.docs.images));
+    done();
+}
 
-gulp.task("docs", gulp.series('clean','styles', 'copy', 'img'));
+function liveReload(done) {
+    browserSync.init({
+        server: {
+            baseDir: CONFIG.docs.base
+        }
+    });
+    done();
+}
+
+function reload(done) {
+    browserSync.reload();
+    done();
+}
+
+function cleanUp() {
+    return del([CONFIG.docs.base]);
+}
+
+function watchChanges() {
+    watch(CONFIG.src.js, series(jsTask, reload));
+    watch(CONFIG.src.sass, series(cssTask, reload));
+    watch(CONFIG.src.html, series(templateTask, reload));
+    watch(CONFIG.src.images, series(imagesTask, reload));
+}
+
+exports.dev = parallel(jsTask, cssTask, templateTask, imagesTask, imagesTaskWebp, watchChanges, liveReload);
+exports.build = series(cleanUp, parallel(jsTask, cssTask, imagesTask, imagesTaskWebp, templateTask));

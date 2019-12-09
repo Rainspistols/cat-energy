@@ -1,0 +1,104 @@
+.personal-programm {
+    background-image: url(../img/index-background-mobile.webp);
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 305px;
+    padding-top: 20px;
+    margin-bottom: 22px;
+    &__title {
+        font-family: 'Oswald', sans-serif, Arial;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 36px;
+        color: $white;
+        text-align: center;
+        max-width: 305px;
+        margin: 0 auto 20px auto;
+    }
+    &__slogan {
+        font-family: 'Oswald', sans-serif, Arial;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 0 29px 0;
+    }
+    &__img-food {
+        margin: 0 auto 3px;
+        display: block;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .personal-programm {
+        padding: 0;
+        background-image: url(../img/index-can-tablet.webp);
+        width: 710px;
+        margin: 250px auto 0;
+        height: 615px;
+        &__title {
+            text-align: left;
+            max-width: 430px;
+            color: $black;
+            font-size: 60px;
+            line-height: 60px;
+            margin-left: 90px;
+            margin-bottom: 50px;
+            position: relative;
+            top: -200px;
+        }
+        &__slogan {
+            text-align: left;
+            max-width: 430px;
+            color: $black;
+            margin-left: 90px;
+            font-size: 20px;
+            line-height: 20px;
+            margin-bottom: 40px;
+            position: relative;
+            top: -200px;
+        }
+        &__img-food {
+            display: none;
+        }
+        &__button {
+            margin: 0 0 530px 90px;
+            max-width: 245px;
+            position: relative;
+            top: -200px;
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .personal-programm {
+        background-image: url(../img/index-background-desktop.webp);
+        width: 50%;
+        margin-top: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $green;
+        background-position: top right;
+        background-size: cover;
+        &__title {
+            margin-left: 80px;
+            top: 220px;
+            right: 650px;
+        }
+        &__slogan {
+            margin-left: 80px;
+            top: 220px;
+            right: 650px;
+        }
+        &__button {
+            margin-left: 80px;
+            top: 220px;
+            right: 650px;
+        }
+    }
+}
