@@ -1,37 +1,41 @@
 {
-  "name": "cat-energy",
-  "version": "0.0.2",
-  "description": "pet shop website",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "andrew",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "autoprefixer": "^9.7.0",
-    "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-csso": "^4.0.1",
-    "gulp-ext-replace": "^0.3.0",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^6.2.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.2",
-    "imagemin-webp": "^5.1.0",
-    "prettier": "^1.18.2",
-    "rangetouch": "^2.0.0",
-    "webpack": "^4.41.2",
-    "webpack-stream": "^5.2.1"
-  },
-  "dependencies": {
-    "babel-loader": "^8.0.6"
-  }
+    "name": "cat-energy",
+    "version": "0.0.2",
+    "description": "pet shop website",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Rainspistols/Cat-energy.git"
+    },
+    "author": "byteserker",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.7.5",
+        "@babel/preset-env": "^7.7.6",
+        "autoprefixer": "^9.7.3",
+        "browser-sync": "^2.26.7",
+        "del": "^5.1.0",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-csso": "^4.0.1",
+        "gulp-ext-replace": "^0.3.0",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-imagemin": "^6.2.0",
+        "gulp-postcss": "^8.0.0",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-uglify": "^3.0.2",
+        "imagemin-webp": "^5.1.0",
+        "prettier": "^1.19.1",
+        "rangetouch": "^2.0.0",
+        "webpack": "^4.41.2",
+        "webpack-stream": "^5.2.1"
+    },
+    "dependencies": {
+        "babel-loader": "^8.0.6"
+    }
 }
