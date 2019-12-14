@@ -1,25 +1,26 @@
 .invitation {
     background-color: #f2f2f2;
     display: flex;
-    padding: 30px 20px;
+    padding: 20px 20px;
     justify-content: space-between;
     align-items: center;
     &__title {
-        font-family: 'Oswald', sans-serif, Arial;
-        font-weight: 400;
-        font-size: 16px;
+        font-family: Arial;
+        font-size: 14px;
+        font-weight: 500;
         line-height: 20px;
         text-transform: uppercase;
         margin: 0;
         padding: 0;
-        margin-right: 30px;
+        width: 40%;
     }
     &__adress {
         font-family: Arial;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 20px;
         margin: 0;
+        width: 50%;
         .invitation__space {
             display: none;
         }
@@ -32,17 +33,15 @@
 
 @media (min-width: $tablet-width) {
     .invitation {
-        width: 92.44%;
         max-width: 1220px;
-        padding: 65px 40px;
+        padding: 30px 40px;
         margin: auto;
+        box-sizing: border-box;
         &__title {
-            width: 160px;
             font-size: 20px;
             line-height: 25px;
         }
         &__adress {
-            width: 160px;
             font-size: 16px;
             line-height: 20px;
             text-align: right;
@@ -69,5 +68,9 @@
     }
     .google-map__invitation {
         display: flex;
+    }
+    .invitation__adress,
+    .invitation__title {
+        width: 40%;
     }
 }

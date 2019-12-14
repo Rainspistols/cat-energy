@@ -93,6 +93,7 @@ body {
     padding: 0;
     background-color: $white;
     min-width: 320px;
+    box-sizing: border-box;
 }
 
 img {
@@ -116,9 +117,8 @@ picture {
 }
 
 .catalog-main__additional-goods {
-    margin-bottom: 85px;
+    margin-bottom: 30px;
 }
-
 .page-main {
     &__invitation {
         background-color: $white;
